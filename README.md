@@ -1,6 +1,4 @@
 # weDevs-Que-4-
-# From client folder
-
 
 # Preview:
 ![Modal based](https://i.ibb.co/Zm41c0f/que-4-1.png)
