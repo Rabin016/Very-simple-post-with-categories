@@ -34,7 +34,7 @@ export default {
                 );
                 this.allCategories = data;
             } catch (err) {
-                console.log(err);
+                new Error(err);
             }
         },
     },
