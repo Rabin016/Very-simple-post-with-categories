@@ -122,7 +122,7 @@ export default {
                     this.newPost.msg != null
                 ) {
                     const { data } = await axios.post(
-                        "http://localhost:5000/api/posts",
+                        "api/posts",
                         this.newPost
                     );
                     this.$emit("postAlart", data);

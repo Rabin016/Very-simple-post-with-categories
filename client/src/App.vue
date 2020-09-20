@@ -29,9 +29,7 @@ export default {
     methods: {
         async loadCategories() {
             try {
-                const { data } = await axios.get(
-                    "http://localhost:5000/api/categories"
-                );
+                const { data } = await axios.get("api/categories");
                 this.allCategories = data;
             } catch (err) {
                 new Error(err);

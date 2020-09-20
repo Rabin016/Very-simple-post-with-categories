@@ -33,10 +33,9 @@ export default {
         async submitCategory() {
             try {
                 if (this.newCategory) {
-                    const res = await axios.post(
-                        "http://localhost:5000/api/categories",
-                        { type: this.newCategory }
-                    );
+                    const res = await axios.post("api/categories", {
+                        type: this.newCategory,
+                    });
                     this.allMsg = res;
                     this.$emit("reloadCategory");
                     this.closeCategories();

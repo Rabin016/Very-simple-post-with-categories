@@ -76,9 +76,7 @@ export default {
     methods: {
         async deleteCategory(id) {
             try {
-                const { data } = await axios.delete(
-                    `http://localhost:5000/api/categories/${id}`
-                );
+                const { data } = await axios.delete(`api/categories/${id}`);
                 this.alartMsg = data;
                 this.$emit("reloadCategory");
                 this.clearAlart();

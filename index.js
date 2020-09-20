@@ -24,3 +24,8 @@ mongoose
 
 // Router
 app.use(router);
+
+if (process.env.NODE_ENV === "poduction") {
+    app.use(express.static(__dirname + "./dist/"));
+    app.get(/.*/, (req, res) => res.sendFile(__dirname + "./dist/index.html"));
+}

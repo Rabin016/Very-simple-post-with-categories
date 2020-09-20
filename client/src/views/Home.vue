@@ -96,9 +96,7 @@ export default {
     methods: {
         async loadPosts() {
             try {
-                const { data } = await axios.get(
-                    "http://localhost:5000/api/posts"
-                );
+                const { data } = await axios.get("api/posts");
                 this.allPosts = data;
             } catch (err) {
                 this.alartMsg = { dangerMsg: "Post not loaded", err };
@@ -106,9 +104,7 @@ export default {
         },
         async deletePost(id) {
             try {
-                const { data } = await axios.delete(
-                    `http://localhost:5000/api/posts/${id}`
-                );
+                const { data } = await axios.delete(`api/posts/${id}`);
                 this.alartMsg = data;
                 this.loadPosts();
                 this.clearAlart();
