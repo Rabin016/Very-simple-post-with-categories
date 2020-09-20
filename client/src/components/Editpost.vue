@@ -111,7 +111,9 @@ export default {
     }),
     async mounted() {
         if (this.editableID) {
-            const { data } = await axios.get(`api/posts/${this.editableID}`);
+            const { data } = await axios.get(
+                `https://post-category-life-rc.herokuapp.com/api/posts/${this.editableID}`
+            );
             this.newPost.title = data.title;
             this.newPost.msg = data.msg;
             this.newPost.category_id.push(...data.category_id);
@@ -122,7 +124,7 @@ export default {
             try {
                 if (this.newPost.category_id != []) {
                     const { data } = await axios.patch(
-                        `api/posts/${this.editableID}`,
+                        `https://post-category-life-rc.herokuapp.com/api/posts/${this.editableID}`,
                         this.newPost
                     );
                     this.$emit("postAlart", data);

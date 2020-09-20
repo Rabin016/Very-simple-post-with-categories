@@ -122,7 +122,7 @@ export default {
                     this.newPost.msg != null
                 ) {
                     const { data } = await axios.post(
-                        "api/posts",
+                        "https://post-category-life-rc.herokuapp.com/api/posts",
                         this.newPost
                     );
                     this.$emit("postAlart", data);

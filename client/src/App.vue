@@ -29,7 +29,9 @@ export default {
     methods: {
         async loadCategories() {
             try {
-                const { data } = await axios.get("api/categories");
+                const { data } = await axios.get(
+                    "https://post-category-life-rc.herokuapp.com/api/categories"
+                );
                 this.allCategories = data;
             } catch (err) {
                 new Error(err);

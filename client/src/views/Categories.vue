@@ -76,7 +76,9 @@ export default {
     methods: {
         async deleteCategory(id) {
             try {
-                const { data } = await axios.delete(`api/categories/${id}`);
+                const { data } = await axios.delete(
+                    `https://post-category-life-rc.herokuapp.com/api/categories/${id}`
+                );
                 this.alartMsg = data;
                 this.$emit("reloadCategory");
                 this.clearAlart();
